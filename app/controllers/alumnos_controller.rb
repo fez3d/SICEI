@@ -4,7 +4,7 @@ class AlumnosController < ApplicationController
     {"nombre": "Alberto Pino", "Matricula": "54321"},
     {"nombre": "Carolina Avila", "Matricula": "66666"}
   ]
-  
+
   def index
     render json: ALUMNOS
   end

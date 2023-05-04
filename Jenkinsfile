@@ -5,7 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh "rspec spec"
+        sh 'RAILS_ENV=test bundle exec rspec'
       }
     }
     stage('Test') {

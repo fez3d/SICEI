@@ -5,7 +5,8 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh bundle install
+        checkout scm
+        sh 'bundle install'
       }
     }
     stage('Test') {

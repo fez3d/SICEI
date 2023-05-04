@@ -5,8 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh 'gem install bundler'
-        sh 'RAILS_ENV=test bundle exec rspec'
+        sh bundle install
       }
     }
     stage('Test') {

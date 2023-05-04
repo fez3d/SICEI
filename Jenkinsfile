@@ -5,7 +5,9 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh 'bundle install'
+        sh '''#!/usr/bin/env bash
+        bundle install
+        '''
       }
     }
     stage('Test') {

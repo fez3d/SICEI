@@ -5,7 +5,9 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
+        sh '#!/bin/bash -l'
         echo "${env.PATH}"
+
       }
     }
     stage('Test') {

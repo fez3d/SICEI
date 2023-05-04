@@ -5,8 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh '#!/bin/bash'
-        sh 'bundle install'
+        echo $PATH
       }
     }
     stage('Test') {

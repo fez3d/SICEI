@@ -6,6 +6,7 @@ pipeline {
       steps {
         echo 'Building..'
         sh '#!/bin/bash'
+        sh 'rvm user 2.7.7'
         sh 'bundle install'
       }
     }

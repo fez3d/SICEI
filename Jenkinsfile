@@ -5,10 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh '''
-        #!/bin/bash
-        bundle install
-        '''
+        sh "rspec spec"
       }
     }
     stage('Test') {

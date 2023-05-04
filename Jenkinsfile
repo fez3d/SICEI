@@ -5,7 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        echo ${env.PATH}
+        echo "${env.PATH}"
       }
     }
     stage('Test') {

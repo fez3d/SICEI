@@ -7,7 +7,6 @@ pipeline {
         echo 'Building..'
         sh '''
         #!/bin/bash
-        rvm use 2.7.7
         bundle install
         '''
       }

@@ -12,6 +12,7 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Testing..'
+        sh 'rspec'
       }
     }
     stage('Deploy') {

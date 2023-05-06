@@ -20,7 +20,7 @@ pipeline {
     stage('Deploy') {
       agent {
         dockerfile {
-          tag 'sicei-${BRANCH_NAME}p:1.0.0-${BUILD_NUMBER}'
+          label 'sicei-${BRANCH_NAME}p:1.0.0-${BUILD_NUMBER}'
         }
       }
       steps {

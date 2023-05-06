@@ -18,6 +18,7 @@ pipeline {
     stage('Deploy') {
       agent {
         dockerfile {
+          filename 'Dockerfile'
           label 'sicei-${BRANCH_NAME}p:1.0.0-${BUILD_NUMBER}'
         }
       }

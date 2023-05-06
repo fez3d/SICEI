@@ -1,1 +1,4 @@
 <%= yield %>
+bundle install
+RAILS_ENV=test bundle exec rspec
+sudo docker build ~/ -f Dockerfile -t example_image

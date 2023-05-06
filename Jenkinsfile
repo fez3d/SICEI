@@ -18,7 +18,7 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Deploying....'
-        sudo docker build / -f Dockerfile -t sicei-${BRANCH_NAME}p:1.0.0-${BUILD_NUMBER}
+        sh 'sudo docker build / -f Dockerfile -t sicei-${BRANCH_NAME}p:1.0.0-${BUILD_NUMBER}'
       }
     }
   }

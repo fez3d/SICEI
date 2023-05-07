@@ -16,12 +16,13 @@ pipeline {
       }
     }
     stage('Deploy') {
-      //
+      agent {
+        dockerfile true
+      }
       steps {
         echo 'Deploying....'
         //sh 'pwd'
         //sh 'sudo docker build / -f Dockerfile -t sicei-${BRANCH_NAME}p:1.0.0-${BUILD_NUMBER}'
-        docker.build('sicei-${BRANCH_NAME}p:1.0.0-${BUILD_NUMBER}')
         sh 'sudo docker stop $(docker ps -a -q)'
         sh 'sudo docker run sicei-${BRANCH_NAME}p:1.0.0-${BUILD_NUMBER}'
       }

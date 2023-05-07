@@ -17,7 +17,9 @@ pipeline {
     }
     stage('Deploy') {
       agent {
-        dockerfile true
+        dockerfile {
+          tag 'test'
+        }
       }
       steps {
         echo 'Deploying....'

@@ -21,7 +21,6 @@ pipeline {
       }
       steps {
         echo 'Deploying....'
-        //sh 'sudo docker stop $(docker ps -a -q)'
       }
     }
   }
